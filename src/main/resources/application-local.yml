@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+    #db name: restaurantdb
+    url: jdbc:mysql://localhost:3306/restaurantdb
+    password: "@Thanhnguyen14#"
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      # if there is update on data, it will update existing tables, not to create a new one
+      ddl-auto: update
+    show-sql: true
+    #    Convert based language to my SQL based query
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
