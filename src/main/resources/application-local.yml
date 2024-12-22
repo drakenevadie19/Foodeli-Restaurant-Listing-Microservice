@@ -7,8 +7,8 @@ spring:
   datasource:
     #db name: restaurantdb
     url: jdbc:mysql://localhost:3306/restaurantdb
-    password: "@Thanhnguyen14#"
     username: root
+    password: "@Thanhnguyen14#"
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
