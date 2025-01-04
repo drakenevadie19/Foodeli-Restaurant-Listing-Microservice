@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RestaurantDTO {
 
-    // Characteristics show case a restaurant
+    // Characteristics showcase a restaurant
     private int id;
     private String name;
     private String address;
