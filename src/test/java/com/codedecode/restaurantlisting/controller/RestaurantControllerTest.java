@@ -50,7 +50,7 @@ public class RestaurantControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(mockRestaurants, response.getBody());
 
-        // Verify that the service method was called
+        // Verify that the service method was called (only once)
         verify(restaurantService, times(1)).findAllRestaurants();
     }
 
