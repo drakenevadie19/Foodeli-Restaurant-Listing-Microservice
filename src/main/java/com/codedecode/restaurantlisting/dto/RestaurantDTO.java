@@ -15,5 +15,5 @@ public class RestaurantDTO {
     private String address;
     private String city;
     private String restaurantDescription;
-
+    private int owner_id;
 }

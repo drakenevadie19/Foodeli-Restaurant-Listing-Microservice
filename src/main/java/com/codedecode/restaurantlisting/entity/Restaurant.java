@@ -31,4 +31,5 @@ public class Restaurant {
     private String city;
     private String restaurantDescription;
 
+    private int owner_id;
 }
