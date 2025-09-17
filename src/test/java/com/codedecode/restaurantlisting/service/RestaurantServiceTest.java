@@ -35,8 +35,8 @@ public class RestaurantServiceTest {
 
         // Create Mock data for result each time fetching list of all restaurants
         List<Restaurant> mockRestaurants = Arrays.asList(
-                new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1"),
-                new Restaurant(2, "Restaurant 2", "Address 2", "city 2", "Desc 2")
+                new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1),
+                new Restaurant(2, "Restaurant 2", "Address 2", "city 2", "Desc 2", 1)
         );
         // Make the function that when repo call findAll function,  return list of mock restaurants above
         when(restaurantRepo.findAll()).thenReturn(mockRestaurants);
@@ -59,7 +59,7 @@ public class RestaurantServiceTest {
 
     @Test
     public void testAddRestaurantInDB() {
-        RestaurantDTO mockRestaurantDTO = new RestaurantDTO(1, "Restaurant 1", "Address 1", "city 1", "Desc 1");
+        RestaurantDTO mockRestaurantDTO = new RestaurantDTO(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1);
         Restaurant mockRestaurant = RestaurantMapper.INSTANCE.mapRestaurantDTOToRestaurant(mockRestaurantDTO);
 
         when(restaurantRepo.save(mockRestaurant)).thenReturn(mockRestaurant);
@@ -74,14 +74,14 @@ public class RestaurantServiceTest {
     @Test
     public void testFetchRestaurantById() {
         Integer mockId = 1;
-        Restaurant mockRestaurant = new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1");
+        Restaurant mockRestaurant = new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1);
 
         when(restaurantRepo.findById(mockId)).thenReturn(Optional.of(mockRestaurant));
 
-        ResponseEntity<RestaurantDTO> response = restaurantService.fetchRestaurantById(mockId);
+        RestaurantDTO response = restaurantService.fetchRestaurantById(mockId);
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(mockId, response.getBody().getId());
+        assertEquals(HttpStatus.OK, response);
+        assertEquals(mockId, response.getId());
 
         verify(restaurantRepo, times(1)).findById(mockId);
     }
@@ -93,10 +93,10 @@ public class RestaurantServiceTest {
 
         when(restaurantRepo.findById(mockId)).thenReturn(Optional.empty());
 
-        ResponseEntity<RestaurantDTO> response = restaurantService.fetchRestaurantById(mockId);
+        RestaurantDTO response = restaurantService.fetchRestaurantById(mockId);
 
-        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-        assertEquals(null, response.getBody());
+        assertEquals(HttpStatus.NOT_FOUND, response);
+        assertEquals(null, response);
 
         verify(restaurantRepo, times(1)).findById(mockId);
     }

@@ -34,12 +34,12 @@ public class RestaurantService {
         return RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurantSaved);
     }
 
-    public ResponseEntity<RestaurantDTO> fetchRestaurantById(Integer id) {
+    public RestaurantDTO fetchRestaurantById(Integer id) {
         Optional<Restaurant> restaurant = restaurantRepo.findById(id);
         if (restaurant.isPresent()) {
-            return new ResponseEntity<>(RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurant.get()), HttpStatus.OK);
+            return RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurant.get());
         }
 
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        return null;
     }
 }

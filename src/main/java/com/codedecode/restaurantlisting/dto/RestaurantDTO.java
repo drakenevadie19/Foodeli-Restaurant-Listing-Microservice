@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class RestaurantDTO {
 
@@ -16,4 +16,13 @@ public class RestaurantDTO {
     private String city;
     private String restaurantDescription;
     private int owner_id;
+
+    public RestaurantDTO(int id, String name, String address, String city, String restaurantDescription, int owner_id) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.city = city;
+        this.restaurantDescription = restaurantDescription;
+        this.owner_id = owner_id;
+    }
 }
