@@ -10,7 +10,7 @@ spring:
     # username: root
     # password: "@Thanhnguyen14#"
     # driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:postgresql://db.sqselqywbqxngsisvoll.supabase.co:5432/postgres?user=postgres&password=@Thanhnguyen14#
+    url: jdbc:postgresql://aws-0-us-west-2.pooler.supabase.com:6543/postgres?user=postgres.sqselqywbqxngsisvoll&password=@Thanhnguyen14#&sslmode=require&prepareThreshold=0&preferQueryMode=simple
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

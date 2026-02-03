@@ -23,8 +23,8 @@ public class RestaurantService {
 //        Hibernate will convert this findAll function to SQL query: SELECT * FROM db
         List<Restaurant> restaurants =  restaurantRepo.findAll();
         // Map it to List of DTOs
-        List<RestaurantDTO> restaurantDTOList =  restaurants.stream().map(restaurant -> RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurant)).collect(Collectors.toList());
-        return restaurantDTOList;
+        System.out.println("All restaurant fetched" + restaurants);
+        return restaurants.stream().map(RestaurantMapper.INSTANCE::mapRestaurantToRestaurantDTO).collect(Collectors.toList());
     }
 
     public RestaurantDTO addRestaurantInDB(RestaurantDTO restaurantDTO) {

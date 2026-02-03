@@ -35,8 +35,8 @@ public class RestaurantServiceTest {
 
         // Create Mock data for result each time fetching list of all restaurants
         List<Restaurant> mockRestaurants = Arrays.asList(
-                new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1),
-                new Restaurant(2, "Restaurant 2", "Address 2", "city 2", "Desc 2", 1)
+                makeRestaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", "", 1, (short) 1),
+                makeRestaurant(2, "Restaurant 2", "Address 2", "city 2", "Desc 2", "", 1, (short) 1)
         );
         // Make the function that when repo call findAll function,  return list of mock restaurants above
         when(restaurantRepo.findAll()).thenReturn(mockRestaurants);
@@ -59,7 +59,7 @@ public class RestaurantServiceTest {
 
     @Test
     public void testAddRestaurantInDB() {
-        RestaurantDTO mockRestaurantDTO = new RestaurantDTO(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1);
+        RestaurantDTO mockRestaurantDTO = new RestaurantDTO(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", "", 1, (short) 1);
         Restaurant mockRestaurant = RestaurantMapper.INSTANCE.mapRestaurantDTOToRestaurant(mockRestaurantDTO);
 
         when(restaurantRepo.save(mockRestaurant)).thenReturn(mockRestaurant);
@@ -74,7 +74,7 @@ public class RestaurantServiceTest {
     @Test
     public void testFetchRestaurantById() {
         Integer mockId = 1;
-        Restaurant mockRestaurant = new Restaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", 1);
+        Restaurant mockRestaurant = makeRestaurant(1, "Restaurant 1", "Address 1", "city 1", "Desc 1", "", 1, (short) 1);
 
         when(restaurantRepo.findById(mockId)).thenReturn(Optional.of(mockRestaurant));
 
@@ -99,5 +99,20 @@ public class RestaurantServiceTest {
         assertEquals(null, response);
 
         verify(restaurantRepo, times(1)).findById(mockId);
+    }
+
+    // Helper: avoids relying on a specific Restaurant constructor
+    private Restaurant makeRestaurant(int id, String name, String address, String city,
+                                      String desc, String coverPath, int ownerId, short status) {
+        Restaurant r = new Restaurant();
+        r.setId(id);
+        r.setName(name);
+        r.setAddress(address);
+        r.setCity(city);
+        r.setRestaurantDescription(desc);
+        r.setCoverImagePath(coverPath);
+        r.setOwnerId(ownerId);
+        r.setStatus(status);
+        return r;
     }
 }

@@ -10,16 +10,13 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="restaurantdb")
 public class Restaurant {
 
     // Characteristics show case a restaurant
@@ -53,4 +50,7 @@ public class Restaurant {
 
     @Column(name = "updated_at", insertable = false)
     private LocalDateTime updatedAt;
+
+    public void setOwnerId(int ownerId) {
+    }
 }
