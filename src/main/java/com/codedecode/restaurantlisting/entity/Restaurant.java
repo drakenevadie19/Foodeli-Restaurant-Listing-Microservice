@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,5 +34,23 @@ public class Restaurant {
     private String city;
     private String restaurantDescription;
 
+    @Column(name = "cover_image_path")
+    private String coverImagePath;
+
+    @Column(name = "owner_id", nullable = false)
     private int owner_id;
+
+    /**
+     * 1 = ACTIVE
+     * 2 = INACTIVE
+     * 0 = SUSPENDED
+     */
+    @Column(nullable = false)
+    private short status;
+
+    @Column(name = "created_at", updatable = false, insertable = false)
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at", insertable = false)
+    private LocalDateTime updatedAt;
 }

@@ -1,0 +1,31 @@
+id,name,address,city,restaurant_description,cover_image_path,owner_id,status
+1,The Hungry Hut,123 Main Street,Anytown,"A cozy family-owned restaurant offering a diverse menu of international cuisines. From sizzling steaks to mouthwatering pasta dishes, we have something to satisfy every craving","",1,1
+2,Spice Fusion,456 Elm Avenue,Townsville,"Experience the vibrant flavors of India at Spice Fusion. Our talented chefs blend traditional Indian spices with a modern twist, creating a culinary journey that will delight your taste buds","",1,1
+3,Seafood Paradise,789 Oak Lane,Metropolis,"Indulge in the freshest catch of the day at Seafood Paradise. With a prime waterfront location, our restaurant offers a wide selection of seafood delicacies, prepared with a touch of coastal flair","",1,1
+4,Tandoori Delight,321 Maple Road,Riverside,"Step into a slice of Italy at La Bella Trattoria. Our charming trattoria-style restaurant serves authentic Italian dishes made from scratch using the finest ingredients. Buon appetito!","",1,1
+5,The Green Garden,987 Pine Street,Lakeside,"Embrace healthy eating at The Green Garden. Our vegetarian and vegan-friendly restaurant showcases the best of plant-based cuisine, with colorful salads, hearty bowls, and nutritious smoothies.","",1,1
+6,Curry House,555 Chestnut Avenue,Belleview,"The Savory Bistro offers an exquisite dining experience with a focus on seasonal, locally sourced ingredients. Our talented chefs create artful plates that blend flavors from around the world, ensuring a memorable culinary adventure","",1,1
+7,Saffron Sizzlers,222 Walnut Street,Harborview,"Sushi Haven invites you to savor the art of Japanese cuisine. Our skilled sushi chefs meticulously craft an array of fresh sushi rolls, sashimi, and delectable tempura, all served in a modern and elegant setting","",1,1
+8,Fireside Grill & Bar,777 Oakwood Drive,Summitville,"Set against a rustic backdrop, Fireside Grill & Bar is the perfect spot for a cozy meal. Our menu features hearty grilled favorites, signature cocktails, and a warm ambiance that will make you feel right at home","",1,1
+9,Urban Taco Co,114 Market Street,Downtown,"Urban Taco Co serves bold and authentic Mexican street tacos using fresh ingredients, house-made salsas, and slow-cooked meats in a vibrant urban setting.","",1,1
+10,Blue Harbor Bistro,890 Seaside Blvd,Oceanview,"Blue Harbor Bistro blends coastal elegance with classic comfort food, offering seafood-forward dishes inspired by New England flavors.","",1,1
+11,Golden Wok Express,62 Lantern Road,Springfield,"Golden Wok Express delivers fast and flavorful Chinese cuisine, featuring wok-fired classics, noodle bowls, and signature fried rice dishes.","",1,1
+12,Maple & Oak Kitchen,415 Heritage Lane,Greenfield,"Maple & Oak Kitchen focuses on modern American cuisine with seasonal menus, handcrafted cocktails, and a warm farmhouse-inspired atmosphere.","",1,1
+13,Pho Saigon House,301 Lotus Avenue,Westport,"Pho Saigon House specializes in traditional Vietnamese dishes, from aromatic pho broths to fresh spring rolls and grilled rice plates.","",1,1
+14,Brick Oven Pizzeria,77 Stonebridge Way,Hillcrest,"Brick Oven Pizzeria brings authentic Neapolitan-style pizzas to Hillcrest, baked in a wood-fired oven and topped with imported Italian ingredients.","",1,1
+15,Mediterraneo Grill,902 Olive Street,Portside,"Mediterraneo Grill celebrates Mediterranean cuisine with fresh seafood, grilled meats, mezze platters, and house-made hummus.","",1,1
+16,Sunrise Breakfast Club,18 Morning Drive,Clearwater,"Sunrise Breakfast Club is a local favorite for hearty breakfasts, fluffy pancakes, artisan coffee, and all-day brunch classics.","",1,1
+17,Fire & Iron Steakhouse,640 Ironwood Blvd,Redrock,"Fire & Iron Steakhouse offers premium cuts of beef, expertly grilled over open flames, paired with an extensive wine and whiskey selection.","",1,1
+18,Bamboo Leaf Thai,259 Orchid Court,Eastwood,"Bamboo Leaf Thai serves authentic Thai cuisine with bold flavors, featuring curries, stir-fries, and noodle dishes made to order.","",1,1
+19,The Rustic Spoon,510 Country Road,Fairview,"The Rustic Spoon delivers comforting homestyle meals with a modern twist, using locally sourced ingredients and seasonal produce.","",1,1
+20,El Camino Cantina,88 Fiesta Plaza,Santa Vista,"El Camino Cantina brings the energy of a traditional Mexican cantina, serving classic dishes, handcrafted margaritas, and live music nights.","",1,1
+21,Harbor Smokehouse,345 Dockside Lane,Bayport,"Harbor Smokehouse specializes in slow-smoked barbecue, featuring tender brisket, pulled pork, and house-made sauces.","",1,1
+22,Luna Sushi Bar,712 Crescent Avenue,Moonridge,"Luna Sushi Bar offers a refined sushi experience with premium fish, creative rolls, and minimalist Japanese-inspired design.","",1,1
+23,Copper Pot Kitchen,129 Hearth Street,Riverbend,"Copper Pot Kitchen highlights global comfort foods prepared with modern techniques and plated with artistic flair.","",1,1
+24,The Noodle Lab,404 Innovation Way,Techville,"The Noodle Lab experiments with flavors from across Asia, offering customizable noodle bowls and fusion-inspired creations.","",1,1
+25,Olive Branch Café,56 Garden Walk,Brookhaven,"Olive Branch Café is a relaxed neighborhood spot serving light Mediterranean fare, fresh salads, and artisan pastries.","",1,1
+26,Riverstone Tavern,901 Mill Road,Oldtown,"Riverstone Tavern combines classic pub dishes with craft beers and a welcoming atmosphere ideal for gatherings.","",1,1
+27,Crimson Chili Kitchen,333 Spice Route,Heatown,"Crimson Chili Kitchen is known for its bold, spicy flavors, specializing in chili-forward dishes and regional hot sauces.","",1,1
+28,Northern Lights Diner,120 Aurora Street,Northgate,"Northern Lights Diner offers classic American diner fare with generous portions, retro décor, and friendly service.","",1,1
+29,La Riviera Française,77 Côte d’Azur Lane,Monterey,"La Riviera Française brings refined French coastal cuisine to Monterey, featuring fresh seafood, delicate sauces, and fine wines.","",1,1
+30,The Daily Grain Bakery,14 Sunrise Alley,Millbrook,"The Daily Grain Bakery crafts fresh breads, pastries, and sandwiches daily, using traditional baking techniques and organic grains.","",1,1
