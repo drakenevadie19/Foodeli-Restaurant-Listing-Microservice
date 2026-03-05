@@ -1,8 +1,20 @@
 eureka:
-  instance:
-    preferIpAddress: true
-    hostname: eureka-0
+  #  instance:
+  #    preferIpAddress: true
+  #    hostname: eureka-0
   client:
     service-url:
-      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
-#      defaultZone: http://localhost:8761/eureka/
+      #      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+      defaultZone: https://foodeli-eureka-service.onrender.com/eureka
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-0-us-west-2.pooler.supabase.com:6543/postgres?user=postgres.sqselqywbqxngsisvoll&password=@Thanhnguyen14#&sslmode=require&prepareThreshold=0&preferQueryMode=simple
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      # if there is update on data, it will update existing tables, not to create a new one
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
